@@ -11,12 +11,13 @@ namespace COMP123_S2019_Assignment5B_301007701
     public static class Program
     {
         public static product product;
+        public static SplashForm splashForm;
         public static SelectForm selectForm;
         public static OrderForm orderForm;
         public static StartForm startForm;
         public static ProductInfoForm productInforForm;
-        public static SplashForm splashForm;
-        public static AboutForm aboutForm;
+ 
+        
 
 
         /// <summary>
@@ -28,16 +29,16 @@ namespace COMP123_S2019_Assignment5B_301007701
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+            splashForm = new SplashForm();
             selectForm = new SelectForm();
             product = new product();
             orderForm = new OrderForm();
             startForm = new StartForm();
             productInforForm = new ProductInfoForm();
-            splashForm = new SplashForm();
-            aboutForm = new AboutForm();
 
 
-            Application.Run(new SelectForm());
+
+            Application.Run(splashForm);
         }
     }
 }
