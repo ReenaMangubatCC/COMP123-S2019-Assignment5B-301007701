@@ -13,9 +13,9 @@ namespace COMP123_S2019_Assignment5B_301007701
         public static product product;
         public static SplashForm splashForm;
         public static SelectForm selectForm;
-        public static OrderForm orderForm;
+        public static ConditionLabel orderForm;
         public static StartForm startForm;
-        public static ProductInfoForm productInforForm;
+        public static ProductInfoForm productInfoForm;
  
         
 
@@ -32,9 +32,9 @@ namespace COMP123_S2019_Assignment5B_301007701
             splashForm = new SplashForm();
             selectForm = new SelectForm();
             product = new product();
-            orderForm = new OrderForm();
+            orderForm = new ConditionLabel();
             startForm = new StartForm();
-            productInforForm = new ProductInfoForm();
+            productInfoForm = new ProductInfoForm();
 
 
 

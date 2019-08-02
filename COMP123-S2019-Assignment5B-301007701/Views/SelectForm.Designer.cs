@@ -38,7 +38,7 @@
             this.CustomerPickLabel = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.NextButton = new System.Windows.Forms.Button();
-            this.BackButton = new System.Windows.Forms.Button();
+            this.CancelButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dollarComputersDataSet)).BeginInit();
@@ -116,35 +116,38 @@
             // NextButton
             // 
             this.NextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NextButton.Location = new System.Drawing.Point(713, 485);
+            this.NextButton.Location = new System.Drawing.Point(671, 485);
             this.NextButton.Name = "NextButton";
-            this.NextButton.Size = new System.Drawing.Size(75, 43);
+            this.NextButton.Size = new System.Drawing.Size(117, 43);
             this.NextButton.TabIndex = 4;
             this.NextButton.Text = "Next";
             this.NextButton.UseVisualStyleBackColor = true;
+            this.NextButton.Click += new System.EventHandler(this.NextButton_Click);
             // 
-            // BackButton
+            // CancelButton
             // 
-            this.BackButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackButton.Location = new System.Drawing.Point(621, 485);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(75, 43);
-            this.BackButton.TabIndex = 5;
-            this.BackButton.Text = "Back";
-            this.BackButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CancelButton.Location = new System.Drawing.Point(528, 485);
+            this.CancelButton.Name = "CancelButton";
+            this.CancelButton.Size = new System.Drawing.Size(126, 43);
+            this.CancelButton.TabIndex = 5;
+            this.CancelButton.Text = "Cancel";
+            this.CancelButton.UseVisualStyleBackColor = true;
+            this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 540);
-            this.Controls.Add(this.BackButton);
+            this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.CustomerPickLabel);
             this.Controls.Add(this.ComputerSelectionLabel);
             this.Controls.Add(this.ProductDataGridView);
             this.Name = "SelectForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Select Your Computer";
             this.Load += new System.EventHandler(this.SelectForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProductDataGridView)).EndInit();
@@ -167,7 +170,7 @@
         private System.Windows.Forms.Label CustomerPickLabel;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button NextButton;
-        private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Button CancelButton;
     }
 }
 

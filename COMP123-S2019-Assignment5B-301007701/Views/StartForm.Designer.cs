@@ -39,33 +39,38 @@
             // 
             // NewOrderButton
             // 
-            this.NewOrderButton.Location = new System.Drawing.Point(187, 324);
-            this.NewOrderButton.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.NewOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NewOrderButton.Location = new System.Drawing.Point(230, 324);
+            this.NewOrderButton.Margin = new System.Windows.Forms.Padding(7);
             this.NewOrderButton.Name = "NewOrderButton";
-            this.NewOrderButton.Size = new System.Drawing.Size(422, 55);
+            this.NewOrderButton.Size = new System.Drawing.Size(360, 55);
             this.NewOrderButton.TabIndex = 0;
             this.NewOrderButton.Text = "Start a new order";
             this.NewOrderButton.UseVisualStyleBackColor = true;
+            this.NewOrderButton.Click += new System.EventHandler(this.NewOrderButton_Click);
             // 
             // LoadOrderButton
             // 
-            this.LoadOrderButton.Location = new System.Drawing.Point(187, 405);
+            this.LoadOrderButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoadOrderButton.Location = new System.Drawing.Point(230, 404);
             this.LoadOrderButton.Margin = new System.Windows.Forms.Padding(7);
             this.LoadOrderButton.Name = "LoadOrderButton";
-            this.LoadOrderButton.Size = new System.Drawing.Size(422, 55);
+            this.LoadOrderButton.Size = new System.Drawing.Size(360, 55);
             this.LoadOrderButton.TabIndex = 1;
             this.LoadOrderButton.Text = "Load a Saved Order";
             this.LoadOrderButton.UseVisualStyleBackColor = true;
             // 
             // ExitButton
             // 
-            this.ExitButton.Location = new System.Drawing.Point(311, 490);
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.Location = new System.Drawing.Point(354, 482);
             this.ExitButton.Margin = new System.Windows.Forms.Padding(7);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(187, 55);
+            this.ExitButton.Size = new System.Drawing.Size(113, 55);
             this.ExitButton.TabIndex = 2;
             this.ExitButton.Text = "Exit";
             this.ExitButton.UseVisualStyleBackColor = true;
+            this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
             // pictureBox1
             // 
@@ -80,7 +85,7 @@
             // OrderLabel
             // 
             this.OrderLabel.AutoSize = true;
-            this.OrderLabel.Location = new System.Drawing.Point(115, 21);
+            this.OrderLabel.Location = new System.Drawing.Point(145, 21);
             this.OrderLabel.Name = "OrderLabel";
             this.OrderLabel.Size = new System.Drawing.Size(564, 39);
             this.OrderLabel.TabIndex = 4;
@@ -98,7 +103,7 @@
             this.Controls.Add(this.LoadOrderButton);
             this.Controls.Add(this.NewOrderButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Start Form";
