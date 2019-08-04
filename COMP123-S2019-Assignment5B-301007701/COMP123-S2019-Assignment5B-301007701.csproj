@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\DollarComputersContext.cs" />
     <Compile Include="Data\product.cs" />
     <Compile Include="Data\ProductModel.cs" />
     <Compile Include="DollarComputersDataSet.Designer.cs">
@@ -139,6 +140,7 @@
       <DependentUpon>DollarComputersDataSet.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\COMP123_S2019_Assignment5B_301007701.Data.product.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

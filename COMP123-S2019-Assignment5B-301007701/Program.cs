@@ -30,11 +30,13 @@ namespace COMP123_S2019_Assignment5B_301007701
             Application.SetCompatibleTextRenderingDefault(false);
 
             splashForm = new SplashForm();
+            startForm = new StartForm();
             selectForm = new SelectForm();
             product = new product();
-            orderForm = new ConditionLabel();
-            startForm = new StartForm();
             productInfoForm = new ProductInfoForm();
+            orderForm = new ConditionLabel();
+            
+            
 
 
 
