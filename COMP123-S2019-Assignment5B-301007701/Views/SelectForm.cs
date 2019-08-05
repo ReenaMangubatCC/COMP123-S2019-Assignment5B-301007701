@@ -33,12 +33,20 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
             //this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
 
         }
-
+        /// <summary>
+        /// This is the event handler that will terminate the program when it is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
+        /// <summary>
+        /// This is the event handler to move from one form to another when the buttone is clicked
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
             Program.productInfoForm.Show();
@@ -55,7 +63,7 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
 
         }
 
-        private void CustomerPickLabel_Click(object sender, EventArgs e)
+        private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
         {
 
         }

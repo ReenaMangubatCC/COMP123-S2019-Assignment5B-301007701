@@ -17,11 +17,6 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void SelectAnotherItemButton_Click(object sender, EventArgs e)
         {
             Program.selectForm.Show();

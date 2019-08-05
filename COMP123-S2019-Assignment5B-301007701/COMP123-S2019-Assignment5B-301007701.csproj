@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Computer.cs" />
     <Compile Include="Data\DollarComputersContext.cs" />
     <Compile Include="Data\product.cs" />
     <Compile Include="Data\ProductModel.cs" />
