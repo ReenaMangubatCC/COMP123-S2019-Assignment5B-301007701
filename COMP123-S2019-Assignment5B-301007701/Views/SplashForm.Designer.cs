@@ -44,6 +44,7 @@
             this.DollarComputersLabel.Size = new System.Drawing.Size(479, 39);
             this.DollarComputersLabel.TabIndex = 0;
             this.DollarComputersLabel.Text = "Welcome to Dollar Computers!";
+            this.DollarComputersLabel.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // pictureBox1
             // 

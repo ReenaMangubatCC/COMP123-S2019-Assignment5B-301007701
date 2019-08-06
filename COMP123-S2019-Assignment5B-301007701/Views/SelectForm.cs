@@ -65,7 +65,26 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
 
         private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
         {
+            //creating local scope aliases
+            var rowIndex = ProductDataGridView.CurrentCell.RowIndex;
+            var rows = ProductDataGridView.Rows;
+            var columnCount = ProductDataGridView.ColumnCount;
+            var cells = rows[rowIndex].Cells;
 
+            rows[rowIndex].Selected = true;
+
+            string selectionString = string.Empty;
+            for(int index = 0; index < columnCount; index++)
+            {
+                selectionString += cells[index].Value.ToString() + " ";
+            }
+
+            SelectionLabel.Text = selectionString;
+
+            //display the information
+            Program.computer.Manufacturer = cells[(int)ComputerField.MANUFACTURER].Value.ToString();
+            Program.computer.Model = cells[(int)ComputerField.MODEL].Value.ToString();
+            Program.computer.Cost = decimal.Parse(cells[(int)ComputerField.COST].Value.ToString());
         }
     }
 }

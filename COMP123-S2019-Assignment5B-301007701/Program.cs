@@ -16,6 +16,8 @@ namespace COMP123_S2019_Assignment5B_301007701
         public static ConditionLabel orderForm;
         public static StartForm startForm;
         public static ProductInfoForm productInfoForm;
+
+        public static Computer computer;
  
         
 
@@ -35,7 +37,8 @@ namespace COMP123_S2019_Assignment5B_301007701
             product = new product();
             productInfoForm = new ProductInfoForm();
             orderForm = new ConditionLabel();
-            
+
+            computer = new Computer();
             
 
 
