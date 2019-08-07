@@ -71,20 +71,16 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
             var columnCount = ProductDataGridView.ColumnCount;
             var cells = rows[rowIndex].Cells;
 
-            rows[rowIndex].Selected = true;
-
             string selectionString = string.Empty;
-            for(int index = 0; index < columnCount; index++)
-            {
-                selectionString += cells[index].Value.ToString() + " ";
-            }
 
+            //outputting the data
+            selectionString = cells[2].Value.ToString() + " " + cells[3].Value.ToString() + " " + cells[1].Value.ToString() + " ";
             SelectionLabel.Text = selectionString;
 
             //display the information
-            Program.computer.Manufacturer = cells[(int)ComputerField.MANUFACTURER].Value.ToString();
-            Program.computer.Model = cells[(int)ComputerField.MODEL].Value.ToString();
-            Program.computer.Cost = decimal.Parse(cells[(int)ComputerField.COST].Value.ToString());
+            ////Program.computer.Manufacturer = cells[(int)ComputerField.MANUFACTURER].Value.ToString();
+            ////Program.computer.Model = cells[(int)ComputerField.MODEL].Value.ToString();
+            ////Program.computer.Cost = decimal.Parse(cells[(int)ComputerField.COST].Value.ToString());
         }
     }
 }
