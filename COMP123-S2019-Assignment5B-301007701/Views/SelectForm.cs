@@ -63,6 +63,11 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
 
         }
 
+        /// <summary>
+        /// This is the event handler to select a full row of data from the datagridview
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductDataGridView_SelectionChanged(object sender, EventArgs e)
         {
             //creating local scope aliases
@@ -73,14 +78,33 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
 
             string selectionString = string.Empty;
 
-            //outputting the data
-            selectionString = cells[2].Value.ToString() + " " + cells[3].Value.ToString() + " " + cells[1].Value.ToString() + " ";
+            //outputting the data into a label
+            selectionString = cells[2].Value.ToString() + " " + cells[3].Value.ToString() + " "+ "Priced at: $" + cells[1].Value.ToString();
             SelectionLabel.Text = selectionString;
 
             //display the information
-            ////Program.computer.Manufacturer = cells[(int)ComputerField.MANUFACTURER].Value.ToString();
-            ////Program.computer.Model = cells[(int)ComputerField.MODEL].Value.ToString();
-            ////Program.computer.Cost = decimal.Parse(cells[(int)ComputerField.COST].Value.ToString());
+            Program.computer.Manufacturer = cells[(int)ComputerField.MANUFACTURER].Value.ToString();
+            Program.computer.Model = cells[(int)ComputerField.MODEL].Value.ToString();
+            Program.computer.Cost = decimal.Parse(cells[(int)ComputerField.COST].Value.ToString());
+
+            Program.computer.ProductID = int.Parse(cells[(int)ComputerField.PRODUCT_ID].Value.ToString());
+            Program.computer.Condition = cells[(int)ComputerField.CONDITION].Value.ToString();
+            Program.computer.Platform = cells[(int)ComputerField.PLATFORM].Value.ToString();
+            Program.computer.OS = cells[(int)ComputerField.OS].Value.ToString();
+
+            //Specs
+            Program.computer.Memory = cells[(int)ComputerField.RAM_SIZE].Value.ToString();
+            Program.computer.CPUBrand = cells[(int)ComputerField.CPU_BRAND].Value.ToString();
+            Program.computer.CPUType = cells[(int)ComputerField.CPU_TYPE].Value.ToString();
+            Program.computer.LCDType = cells[(int)ComputerField.LCD_TYPE].Value.ToString();
+            Program.computer.CPUNumber = cells[(int)ComputerField.CPU_NUMBER].Value.ToString();
+            Program.computer.CPUSpeed = cells[(int)ComputerField.CPU_SPEED].Value.ToString();
+            Program.computer.HDDSize = cells[(int)ComputerField.HDD_SIZE].Value.ToString();
+            Program.computer.GPUType = cells[(int)ComputerField.GPU_TYPE].Value.ToString();
+            Program.computer.WebCam = cells[(int)ComputerField.WEBCAM].Value.ToString();
+
+
         }
+
     }
 }

@@ -12,7 +12,12 @@ namespace COMP123_S2019_Assignment5B_301007701
         COST,
         MANUFACTURER,
         MODEL,
+        RAM_TYPE,
         RAM_SIZE,
+        LCD_TYPE,
+        SCREEN_SIZE,
+        RESOLUTION,
+        CPU_CLASS,
         CPU_BRAND,
         CPU_TYPE,
         CPU_SPEED,
@@ -21,10 +26,10 @@ namespace COMP123_S2019_Assignment5B_301007701
         OS,
         PLATFORM,
         HDD_SIZE,
+        HDD_SPEED,
         GPU_TYPE,
-        WEBCAM,
-        DISPLAY_TYPE,
-        NUM_OF_FIELDS
+        OPTICAL_DRIVE,
+        WEBCAM
         
     }
     public class Computer
@@ -33,18 +38,25 @@ namespace COMP123_S2019_Assignment5B_301007701
         public decimal Cost { get; set; }
         public string Manufacturer { get; set; }
         public string Model { get; set; }
+        public string RAMType { get; set; }
         public string Memory { get; set; }
+        public string LCDType { get; set; }
+        public string ScreenSize { get; set; }
+        public string Resolution { get; set; }
+        public string CPUClass { get; set; }
         public string CPUBrand { get; set; }
         public string CPUType { get; set; }
         public string CPUSpeed { get; set; }
-        public int CPUNumber { get; set; }
+        public string CPUNumber { get; set; }
         public string Condition { get; set; }
         public string OS { get; set; }
         public string Platform { get; set; }
         public string HDDSize { get; set; }
+        public string HDDSpeed { get; set; }
         public string GPUType { get; set; }
+        public string OpticalDrive { get; set; }
         public string WebCam { get; set; }
-        public string LCDType { get; set; }
+       
 
     }
 }
