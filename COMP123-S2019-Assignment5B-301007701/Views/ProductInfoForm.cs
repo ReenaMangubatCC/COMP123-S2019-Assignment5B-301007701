@@ -47,12 +47,6 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
 
         }
 
-        private void ProductInfoForm_Load(object sender, EventArgs e)
-        {
-            SetCorrectData();
-
-        }
-
         private void SetCorrectData()
         {
 
@@ -117,6 +111,14 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
                 outputString.Dispose();
 
             }
+
+        }
+
+        private void ProductInfoForm_Activated(object sender, EventArgs e)
+        {
+            SetCorrectData();
+
+
 
         }
     }

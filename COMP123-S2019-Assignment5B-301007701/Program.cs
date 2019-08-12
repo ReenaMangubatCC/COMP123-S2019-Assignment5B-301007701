@@ -13,7 +13,7 @@ namespace COMP123_S2019_Assignment5B_301007701
         public static product product;
         public static SplashForm splashForm;
         public static SelectForm selectForm;
-        public static ConditionLabel orderForm;
+        public static OrderForm orderForm;
         public static StartForm startForm;
         public static ProductInfoForm productInfoForm;
 
@@ -36,7 +36,7 @@ namespace COMP123_S2019_Assignment5B_301007701
             selectForm = new SelectForm();
             product = new product();
             productInfoForm = new ProductInfoForm();
-            orderForm = new ConditionLabel();
+            orderForm = new OrderForm();
 
             computer = new Computer();
             

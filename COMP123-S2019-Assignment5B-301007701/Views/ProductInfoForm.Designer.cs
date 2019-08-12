@@ -569,7 +569,7 @@
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Information Form";
-            this.Load += new System.EventHandler(this.ProductInfoForm_Load);
+            this.Activated += new System.EventHandler(this.ProductInfoForm_Activated);
             this.ProductInfoMenuStrip.ResumeLayout(false);
             this.ProductInfoMenuStrip.PerformLayout();
             this.ProductDetailsGroupBox.ResumeLayout(false);
