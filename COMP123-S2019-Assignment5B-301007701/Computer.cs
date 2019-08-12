@@ -29,7 +29,7 @@ namespace COMP123_S2019_Assignment5B_301007701
         HDD_SPEED,
         GPU_TYPE,
         OPTICAL_DRIVE,
-        WEBCAM
+        AUDIO_TYPE
         
     }
     public class Computer
@@ -55,7 +55,7 @@ namespace COMP123_S2019_Assignment5B_301007701
         public string HDDSpeed { get; set; }
         public string GPUType { get; set; }
         public string OpticalDrive { get; set; }
-        public string WebCam { get; set; }
+        public string AudioType { get; set; }
        
 
     }

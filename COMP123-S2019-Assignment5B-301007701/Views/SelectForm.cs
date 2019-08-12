@@ -101,7 +101,7 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
             Program.computer.CPUSpeed = cells[(int)ComputerField.CPU_SPEED].Value.ToString();
             Program.computer.HDDSize = cells[(int)ComputerField.HDD_SIZE].Value.ToString();
             Program.computer.GPUType = cells[(int)ComputerField.GPU_TYPE].Value.ToString();
-            Program.computer.WebCam = cells[(int)ComputerField.WEBCAM].Value.ToString();
+            Program.computer.AudioType = cells[(int)ComputerField.AUDIO_TYPE].Value.ToString();
 
 
         }

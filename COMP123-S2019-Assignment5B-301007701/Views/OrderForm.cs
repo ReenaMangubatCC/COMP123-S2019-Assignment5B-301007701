@@ -20,8 +20,8 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
 
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //ProductPrintForm.PrintAction = PrintAction.PrintToPreview;
-            //ProductPrintForm.Print();
+            MessageBox.Show("Your selection is printing...", "Printing complete",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
@@ -40,6 +40,11 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
         }
 
         private void BackButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.productInfoForm.Show();
             this.Hide();

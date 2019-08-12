@@ -58,7 +58,7 @@
             this.CPUTypeResultLabel = new System.Windows.Forms.Label();
             this.CPUBrandResultLabel = new System.Windows.Forms.Label();
             this.MemoryResultLabel = new System.Windows.Forms.Label();
-            this.WebCamLabel = new System.Windows.Forms.Label();
+            this.AudioTypeLabel = new System.Windows.Forms.Label();
             this.GPUTypeLabel = new System.Windows.Forms.Label();
             this.HDDLabel = new System.Windows.Forms.Label();
             this.CPUSpeedLabel = new System.Windows.Forms.Label();
@@ -118,7 +118,7 @@
             // toolStripSeparator
             // 
             this.toolStripSeparator.Name = "toolStripSeparator";
-            this.toolStripSeparator.Size = new System.Drawing.Size(170, 6);
+            this.toolStripSeparator.Size = new System.Drawing.Size(213, 6);
             // 
             // saveToolStripMenuItem
             // 
@@ -126,18 +126,19 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(170, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(213, 6);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(170, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(213, 6);
             // 
             // exitToolStripMenuItem
             // 
@@ -262,7 +263,7 @@
             this.SpecsGroupBox.Controls.Add(this.CPUTypeResultLabel);
             this.SpecsGroupBox.Controls.Add(this.CPUBrandResultLabel);
             this.SpecsGroupBox.Controls.Add(this.MemoryResultLabel);
-            this.SpecsGroupBox.Controls.Add(this.WebCamLabel);
+            this.SpecsGroupBox.Controls.Add(this.AudioTypeLabel);
             this.SpecsGroupBox.Controls.Add(this.GPUTypeLabel);
             this.SpecsGroupBox.Controls.Add(this.HDDLabel);
             this.SpecsGroupBox.Controls.Add(this.CPUSpeedLabel);
@@ -283,9 +284,9 @@
             // 
             this.WebCamResultLabel.BackColor = System.Drawing.Color.White;
             this.WebCamResultLabel.ForeColor = System.Drawing.Color.Black;
-            this.WebCamResultLabel.Location = new System.Drawing.Point(305, 353);
+            this.WebCamResultLabel.Location = new System.Drawing.Point(174, 353);
             this.WebCamResultLabel.Name = "WebCamResultLabel";
-            this.WebCamResultLabel.Size = new System.Drawing.Size(194, 27);
+            this.WebCamResultLabel.Size = new System.Drawing.Size(531, 27);
             this.WebCamResultLabel.TabIndex = 26;
             // 
             // GPUTypeResultLabel
@@ -360,14 +361,14 @@
             this.MemoryResultLabel.Size = new System.Drawing.Size(215, 27);
             this.MemoryResultLabel.TabIndex = 18;
             // 
-            // WebCamLabel
+            // AudioTypeLabel
             // 
-            this.WebCamLabel.AutoSize = true;
-            this.WebCamLabel.Location = new System.Drawing.Point(207, 353);
-            this.WebCamLabel.Name = "WebCamLabel";
-            this.WebCamLabel.Size = new System.Drawing.Size(102, 25);
-            this.WebCamLabel.TabIndex = 8;
-            this.WebCamLabel.Text = "WebCam:";
+            this.AudioTypeLabel.AutoSize = true;
+            this.AudioTypeLabel.Location = new System.Drawing.Point(49, 353);
+            this.AudioTypeLabel.Name = "AudioTypeLabel";
+            this.AudioTypeLabel.Size = new System.Drawing.Size(119, 25);
+            this.AudioTypeLabel.TabIndex = 8;
+            this.AudioTypeLabel.Text = "Audio Type:";
             // 
             // GPUTypeLabel
             // 
@@ -603,7 +604,7 @@
         private System.Windows.Forms.Label CPUBrandLabel;
         private System.Windows.Forms.Label CPUNumberLabel;
         private System.Windows.Forms.Label MemoryLabel;
-        private System.Windows.Forms.Label WebCamLabel;
+        private System.Windows.Forms.Label AudioTypeLabel;
         private System.Windows.Forms.Label GPUTypeLabel;
         private System.Windows.Forms.Label HDDLabel;
         private System.Windows.Forms.Label CPUSpeedLabel;

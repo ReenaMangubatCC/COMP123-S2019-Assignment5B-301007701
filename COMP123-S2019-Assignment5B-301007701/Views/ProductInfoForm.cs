@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,8 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
         {
             Program.selectForm.Show();
             this.Hide();
+
+
         }
 
         private void ProductInfoForm_Load(object sender, EventArgs e)
@@ -52,6 +55,7 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
 
         private void SetCorrectData()
         {
+
             ProductIDResultLabel.Text = Program.computer.ProductID.ToString();
             ConditionResultLabel.Text = Program.computer.Condition.ToString();
             CostResultLabel.Text = Program.computer.Cost.ToString();
@@ -71,7 +75,7 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
             CPUSpeedResultLabel.Text = Program.computer.CPUSpeed.ToString();
             HDDResultLabel.Text = Program.computer.HDDSize.ToString();
             GPUTypeResultLabel.Text = Program.computer.GPUType.ToString();
-            WebCamResultLabel.Text = Program.computer.WebCam.ToString();
+            WebCamResultLabel.Text = Program.computer.AudioType.ToString();
         }
 
         private void CancelButton_Click(object sender, EventArgs e)
@@ -82,6 +86,38 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //open a stream to write to
+            using (StreamWriter outputString = new StreamWriter(
+                File.Open("Product.txt", FileMode.Create)))
+            {
+                //writing to the file
+                outputString.WriteLine(Program.computer.ProductID);
+                outputString.WriteLine(Program.computer.Cost);
+                outputString.WriteLine(Program.computer.Manufacturer);
+                outputString.WriteLine(Program.computer.Model);
+                outputString.WriteLine(Program.computer.Memory);
+                outputString.WriteLine(Program.computer.LCDType);
+                outputString.WriteLine(Program.computer.CPUBrand);
+                outputString.WriteLine(Program.computer.CPUType);
+                outputString.WriteLine(Program.computer.CPUSpeed);
+                outputString.WriteLine(Program.computer.CPUNumber);
+                outputString.WriteLine(Program.computer.Condition);
+                outputString.WriteLine(Program.computer.OS);
+                outputString.WriteLine(Program.computer.Platform);
+                outputString.WriteLine(Program.computer.HDDSize);
+                outputString.WriteLine(Program.computer.GPUType);
+                outputString.WriteLine(Program.computer.AudioType);
+
+                //cleanup
+                outputString.Close();
+                outputString.Dispose();
+
+            }
+
         }
     }
 }
