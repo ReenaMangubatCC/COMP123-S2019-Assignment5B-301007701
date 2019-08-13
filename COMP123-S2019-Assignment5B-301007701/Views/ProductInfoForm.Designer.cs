@@ -77,6 +77,8 @@
             this.ProductIDResultLabel = new System.Windows.Forms.Label();
             this.ConditionResultLabel = new System.Windows.Forms.Label();
             this.CostResultLabel = new System.Windows.Forms.Label();
+            this.ComputerSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.ComputerOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.ProductInfoMenuStrip.SuspendLayout();
             this.ProductDetailsGroupBox.SuspendLayout();
             this.SpecsGroupBox.SuspendLayout();
@@ -545,6 +547,10 @@
             this.CostResultLabel.Size = new System.Drawing.Size(154, 27);
             this.CostResultLabel.TabIndex = 15;
             // 
+            // ComputerOpenFileDialog
+            // 
+            this.ComputerOpenFileDialog.FileName = "openFileDialog1";
+            // 
             // ProductInfoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -565,7 +571,9 @@
             this.Controls.Add(this.ProductDetailsGroupBox);
             this.Controls.Add(this.ProductInfoMenuStrip);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.ProductInfoMenuStrip;
+            this.MaximizeBox = false;
             this.Name = "ProductInfoForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Product Information Form";
@@ -631,5 +639,7 @@
         private System.Windows.Forms.Label CPUBrandResultLabel;
         private System.Windows.Forms.Label WebCamResultLabel;
         private System.Windows.Forms.Label GPUTypeResultLabel;
+        private System.Windows.Forms.SaveFileDialog ComputerSaveFileDialog;
+        private System.Windows.Forms.OpenFileDialog ComputerOpenFileDialog;
     }
 }

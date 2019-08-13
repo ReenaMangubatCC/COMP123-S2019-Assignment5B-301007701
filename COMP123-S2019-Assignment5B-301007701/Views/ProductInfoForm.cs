@@ -103,33 +103,48 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
         /// <param name="e"></param>
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //open a stream to write to
-            using (StreamWriter outputString = new StreamWriter(
-                File.Open("Product.txt", FileMode.Create)))
+            //configure the file dialog
+            ComputerSaveFileDialog.FileName = "Product.txt";
+            ComputerSaveFileDialog.InitialDirectory = Directory.GetCurrentDirectory();
+            ComputerSaveFileDialog.Filter = "Text Files (*.txt)|*.txt| All Files (*.*)|*.*";
+
+            //open the save file dialog
+            var result = ComputerSaveFileDialog.ShowDialog();
+            if(result != DialogResult.Cancel)
             {
-                //writing to the file
-                outputString.WriteLine(Program.computer.ProductID);
-                outputString.WriteLine(Program.computer.Cost);
-                outputString.WriteLine(Program.computer.Manufacturer);
-                outputString.WriteLine(Program.computer.Model);
-                outputString.WriteLine(Program.computer.Memory);
-                outputString.WriteLine(Program.computer.LCDType);
-                outputString.WriteLine(Program.computer.CPUBrand);
-                outputString.WriteLine(Program.computer.CPUType);
-                outputString.WriteLine(Program.computer.CPUSpeed);
-                outputString.WriteLine(Program.computer.CPUNumber);
-                outputString.WriteLine(Program.computer.Condition);
-                outputString.WriteLine(Program.computer.OS);
-                outputString.WriteLine(Program.computer.Platform);
-                outputString.WriteLine(Program.computer.HDDSize);
-                outputString.WriteLine(Program.computer.GPUType);
-                outputString.WriteLine(Program.computer.AudioType);
+                //open a stream to write to
+                using (StreamWriter outputString = new StreamWriter(
+                    File.Open(ComputerSaveFileDialog.FileName, FileMode.Create)))
+                {
+                    //writing to the file
+                    outputString.WriteLine(Program.computer.ProductID.ToString());
+                    outputString.WriteLine(Program.computer.Cost);
+                    outputString.WriteLine(Program.computer.Manufacturer);
+                    outputString.WriteLine(Program.computer.Model);
+                    outputString.WriteLine(Program.computer.Memory);
+                    outputString.WriteLine(Program.computer.LCDType);
+                    outputString.WriteLine(Program.computer.CPUBrand);
+                    outputString.WriteLine(Program.computer.CPUType);
+                    outputString.WriteLine(Program.computer.CPUSpeed);
+                    outputString.WriteLine(Program.computer.CPUNumber);
+                    outputString.WriteLine(Program.computer.Condition);
+                    outputString.WriteLine(Program.computer.OS);
+                    outputString.WriteLine(Program.computer.Platform);
+                    outputString.WriteLine(Program.computer.HDDSize);
+                    outputString.WriteLine(Program.computer.GPUType);
+                    outputString.WriteLine(Program.computer.AudioType);
 
-                //cleanup
-                outputString.Close();
-                outputString.Dispose();
+                    //cleanup
+                    outputString.Close();
+                    outputString.Dispose();
 
+                    //give feedback to the user that the file has been saved
+                    MessageBox.Show("File Saved...", "Saving File...",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+
+ 
 
         }
 
@@ -141,7 +156,6 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
         private void ProductInfoForm_Activated(object sender, EventArgs e)
         {
             SetCorrectData();
-
         }
     }
 }
