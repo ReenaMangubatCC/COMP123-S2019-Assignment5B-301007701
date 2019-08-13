@@ -34,6 +34,7 @@
             this.ExitButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.OrderLabel = new System.Windows.Forms.Label();
+            this.LoadComputerOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +60,7 @@
             this.LoadOrderButton.TabIndex = 1;
             this.LoadOrderButton.Text = "Load a Saved Order";
             this.LoadOrderButton.UseVisualStyleBackColor = true;
+            this.LoadOrderButton.Click += new System.EventHandler(this.LoadOrderButton_Click);
             // 
             // ExitButton
             // 
@@ -91,6 +93,10 @@
             this.OrderLabel.TabIndex = 4;
             this.OrderLabel.Text = "Order your Computer with us Today!";
             // 
+            // LoadComputerOpenFileDialog
+            // 
+            this.LoadComputerOpenFileDialog.FileName = "openFileDialog1";
+            // 
             // StartForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(19F, 38F);
@@ -122,5 +128,6 @@
         private System.Windows.Forms.Button ExitButton;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label OrderLabel;
+        private System.Windows.Forms.OpenFileDialog LoadComputerOpenFileDialog;
     }
 }

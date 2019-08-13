@@ -142,8 +142,9 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
         /// <param name="e"></param>
         private void FinishButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Thank you for choosing to business with us, Dollar Computers!\nYour order will be processed within 7-10 days.","Order Completed",
+            MessageBox.Show("Thank you for doing business with us!\nYour order will be processed within 7-10 days.","Order Completed",
                MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Application.Exit();
         }
     }
 }
