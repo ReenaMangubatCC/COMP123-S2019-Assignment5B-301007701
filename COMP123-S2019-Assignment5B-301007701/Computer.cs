@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+/*
+ * APP NAME: Dollar Computers
+ * AUTHOR NAME: Reena Mangubat
+ * STUDENT ID: 301007701
+ * APP CREATION DATE: July 31, 2019
+ * DESCRIPTION: This is the Computer class which holds all of the computer data.
+ **/
 namespace COMP123_S2019_Assignment5B_301007701
 {
     enum ComputerField

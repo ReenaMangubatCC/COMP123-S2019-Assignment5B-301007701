@@ -9,7 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * APP NAME: Dollar Computers
+ * AUTHOR NAME: Reena Mangubat
+ * STUDENT ID: 301007701
+ * APP CREATION DATE: July 31, 2019
+ * DESCRIPTION: This is the Order form in which the user finalizes their order.
+ **/
 namespace COMP123_S2019_Assignment5B_301007701.Views
 {
     public partial class OrderForm : Form
@@ -18,18 +24,32 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// This is the event handler for the printToolStrip menu item click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Your selection is printing...", "Printing complete",
+            MessageBox.Show("Your selection has been printed", "Print",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// This is the event handler for the exitToolStrip menu item click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// This is the event handler for the Cancel button click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -40,12 +60,22 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
 
         }
 
+        /// <summary>
+        /// This is the event handler for the backToolStrip menu item click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void backToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.productInfoForm.Show();
             this.Hide();
         }
 
+        /// <summary>
+        /// This is the event handler for the OrderForm activated event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void OrderForm_Activated(object sender, EventArgs e)
         {
             //open file stream and read it
@@ -91,6 +121,17 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
                 AudioTypeDataLabel.Text = Program.computer.AudioType.ToString();
 
             }
+        }
+
+        /// <summary>
+        /// This is the event handler for the Finish button click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void FinishButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Thank you for choosing to business with us, Dollar Computers!\nYour order will be processed within 7-10 days.","Order Completed",
+               MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

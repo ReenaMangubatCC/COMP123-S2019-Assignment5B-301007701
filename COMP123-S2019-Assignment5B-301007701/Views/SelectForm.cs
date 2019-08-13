@@ -9,7 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * APP NAME: Dollar Computers
+ * AUTHOR NAME: Reena Mangubat
+ * STUDENT ID: 301007701
+ * APP CREATION DATE: July 31, 2019
+ * DESCRIPTION: This is the Select Form and its main purpose is to allow the user to pick their computer of choice.
+ **/
 namespace COMP123_S2019_Assignment5B_301007701.Views
 {
     public partial class SelectForm : Form
@@ -26,15 +32,10 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
                 db.products.Load();
                 productBindingSource.DataSource = db.products.Local.ToBindingList();
             }
-            
-            
-            
-            // TODO: This line of code loads data into the 'dollarComputersDataSet.products' table. You can move, or remove it, as needed.
-            //this.productsTableAdapter.Fill(this.dollarComputersDataSet.products);
 
         }
         /// <summary>
-        /// This is the event handler that will terminate the program when it is clicked
+        /// This is the event handler for the Cancel button click event
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -43,7 +44,7 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
             Application.Exit();
         }
         /// <summary>
-        /// This is the event handler to move from one form to another when the buttone is clicked
+        /// This is the event handler for the Next button click event
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -64,7 +65,7 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
         }
 
         /// <summary>
-        /// This is the event handler to select a full row of data from the datagridview
+        /// This is the event handler for the ProductData grid view selection changed event
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

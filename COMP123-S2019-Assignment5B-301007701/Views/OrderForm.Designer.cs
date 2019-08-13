@@ -114,7 +114,7 @@
             this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.printToolStripMenuItem.Text = "&Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
@@ -174,6 +174,7 @@
             this.FinishButton.TabIndex = 1;
             this.FinishButton.Text = "Finish";
             this.FinishButton.UseVisualStyleBackColor = true;
+            this.FinishButton.Click += new System.EventHandler(this.FinishButton_Click);
             // 
             // BackButton
             // 

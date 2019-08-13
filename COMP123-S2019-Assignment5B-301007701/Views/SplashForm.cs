@@ -7,7 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * APP NAME: Dollar Computers
+ * AUTHOR NAME: Reena Mangubat
+ * STUDENT ID: 301007701
+ * APP CREATION DATE: July 31, 2019
+ * DESCRIPTION: This is the Splash Form and it is the first form to appear on the screen to introduce the app.
+ **/
 namespace COMP123_S2019_Assignment5B_301007701.Views
 {
     public partial class SplashForm : Form

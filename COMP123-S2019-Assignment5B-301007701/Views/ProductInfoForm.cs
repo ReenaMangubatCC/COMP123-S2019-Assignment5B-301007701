@@ -8,7 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+/*
+ * APP NAME: Dollar Computers
+ * AUTHOR NAME: Reena Mangubat
+ * STUDENT ID: 301007701
+ * APP CREATION DATE: July 31, 2019
+ * DESCRIPTION: This is the ProductInfo Form which shows the user the details of their computer selection.
+ **/
 namespace COMP123_S2019_Assignment5B_301007701.Views
 {
     public partial class ProductInfoForm : Form
@@ -24,7 +30,7 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
         }
 
         /// <summary>
-        /// This is the event handler that allows the user to move onto the next form by a click event
+        /// This is the event handler for the Next button click event
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -35,7 +41,7 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
 
         }
         /// <summary>
-        /// This is the even handler that allows for the user to switch back and forth between forms to select a new item with a click event
+        /// This is the event handler for the selectAnotherProduct menu item click event
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -47,6 +53,9 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
 
         }
 
+        /// <summary>
+        /// This method will take the data from the row that was selected and put them in the appropriate places
+        /// </summary>
         private void SetCorrectData()
         {
 
@@ -77,11 +86,21 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
          
         }
 
+        /// <summary>
+        /// This is the event handler for the exitToolStrip menu item click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// This is the event handler for the saveToolStrip menu item click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //open a stream to write to
@@ -114,11 +133,14 @@ namespace COMP123_S2019_Assignment5B_301007701.Views
 
         }
 
+        /// <summary>
+        /// This is the event handler for the ProductInfoForm activated event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductInfoForm_Activated(object sender, EventArgs e)
         {
             SetCorrectData();
-
-
 
         }
     }
